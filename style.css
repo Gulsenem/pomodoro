@@ -1,0 +1,124 @@
+*
+{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    
+}
+:root
+{
+    --radius: 5px;
+    --dark_red: rgb(194, 68, 68);
+    --hell_red: rgb(206, 125, 125);
+}
+body
+{
+    margin:0;
+    height: 100vh;
+    background-color: var(--dark_red);
+    color:white;
+}
+
+.wrapper
+{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5
+{
+    margin:0;
+}
+
+.flex
+{
+    display: flex;
+    justify-content: space-between;
+}
+button
+{
+    border:none;
+    outline:none;
+    cursor: pointer;
+    border-radius: var(--radius);
+    padding: 8px 20px;
+    background-color: var(--hell_red);
+    color:white;
+    font-size: 1em;
+}
+/*==================================================*/
+.settings
+{
+    padding: 20px 0;
+    border-bottom: 2px solid rgb(177, 40, 40);
+}
+.sr_btns>button
+{
+    margin-left: 10px;
+}
+.container
+{
+    max-width: 500px;
+    margin: 40px auto;
+}
+.container>div{
+    margin-bottom: 40px;
+}
+.timer
+{
+    
+    padding: 20px;
+    text-align: center;
+    background-color: var(--hell_red);
+    border-radius: var(--radius);
+}
+.time_btns>button
+{
+    margin: 0 5px;
+}
+.active
+{
+    background-color: var(--dark_red);
+}
+.time_show
+{
+    font-size: 7em;
+    padding: 20px 0;
+}
+#start_btn
+{
+    background-color: white;
+    color: var(--dark_red);
+    padding: 12px 40px;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 13px 20px 2px rgba(0,0,0,0.2); 
+    box-shadow: 0px 13px 20px 2px rgba(0,0,0,0.2);
+}
+
+.add_task button
+{
+    width: 100%;
+    padding: 20px 40px;
+    outline:none;
+    background-color: rgb(180, 53, 53);
+    border: 2px dashed var(--hell_red);
+    color:white;
+    cursor:pointer;
+}
+.add_task button:hover
+{
+    background-color: rgb(180, 48, 48);
+}
+
+.task_liste
+{
+    margin-top: 20px;
+    background-color:white;
+    color:black;
+    padding: 10px;
+    border-radius:var(--radius);
+    
+}
+.task_liste:hover
+{
+  border-left: 8px solid black;  
+}
