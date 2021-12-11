@@ -123,3 +123,13 @@ button
 {
   border-left: 8px solid black; 
 }
+small
+{
+    margin-left: 50px;
+}
+small a
+{
+    color:rgb(247, 243, 6);
+    margin-left: 5px;
+    font-weight: bold;
+}
