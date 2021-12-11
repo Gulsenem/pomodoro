@@ -1,10 +1,13 @@
 var time_start;
 var disp = document.getElementById("time_show");
 var is_timer_started = false;
-// 1. aktiv klas goshmak
+
+
+// 1. add active class
 var header = document.getElementById("time_btns");
 var btns = header.getElementsByClassName("time_btn");
-for (var i = 0; i < btns.length; i++) {
+for (var i = 0; i < btns.length; i++) 
+{
   btns[i].addEventListener("click", function() {
   var current = document.getElementsByClassName("active");
   current[0].className = current[0].className.replace(" active", "");
@@ -12,7 +15,9 @@ for (var i = 0; i < btns.length; i++) {
   myFunction_set(current[0].innerHTML);
   });
 }
-// aktiv klasa görä renk üytgetmek
+///////////////////////////////////////////////////////////////////////
+
+// 2. to change :roots color compared to  active class
 
 // Get the root element
 var r = document.querySelector(':root');
@@ -21,13 +26,11 @@ var r = document.querySelector(':root');
 function myFunction_get() {
   // Get the styles (properties and values) for the root
   var rs = getComputedStyle(r);
-  // Alert the value of the --blue variable
-  alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
 }
 
 // Create a function for setting a variable value
 function myFunction_set(str) {
-  // Set the value of variable --blue to another value (in this case "lightblue")
+  // Set the value of variable --accent .... to another value (in this case "XXXXXXX")
 if(str=="Pomodoro")
   {
     r.style.setProperty('--primary', 'rgb(194, 68, 68)');
@@ -62,6 +65,8 @@ if(str=="Pomodoro")
 
 /////////////////////////////////////////////////////////////////////
 
+
+//countdown function
 function start()
 {
     startTimer(time_start, disp);
