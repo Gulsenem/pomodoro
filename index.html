@@ -22,15 +22,15 @@
         <div class="container">
 
             <div class="timer">
-                <div class="time_btns">
-                    <button class='active'>Pomodoro</button>
-                    <button>Short Break</button>
-                    <button>Long Break</button>
+                <div class="time_btns" id="time_btns">
+                    <button class='time_btn active'>Pomodoro</button>
+                    <button class='time_btn'>Short Break</button>
+                    <button class='time_btn'>Long Break</button>
                 </div>
-                <div class="time_show">
+                <div id="time_show">
                         25:00
                 </div>
-                <button id="start_btn">Start</button>
+                <button id="start_btn" onclick="start()">Start</button>
             </div>
 
             <div class="add_task">
@@ -43,5 +43,8 @@
         </div>
 
     </div>
+
+    <script src="script.js"></script>
+    <script src="test.js"></script>
 </body>
 </html>
