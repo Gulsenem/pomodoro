@@ -77,6 +77,10 @@ function stop()
 {
   clearInterval(time_interval);
   start_btn.innerHTML = "Start";
+  let  str = time_show.innerHTML.split(":");
+  time_start = parseInt(str[0]*60 + str[1]);
+  console.log(time_start);
+  
 }
 ///////////////////////////////////////////////////////
 

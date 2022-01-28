@@ -1,4 +1,5 @@
-var time_start;
+var time_start= 25*60;
+let time_interval;
 var disp = document.getElementById("time_show");
 var is_timer_started = false;
 
@@ -9,10 +10,13 @@ var btns = header.getElementsByClassName("time_btn");
 for (var i = 0; i < btns.length; i++) 
 {
   btns[i].addEventListener("click", function() {
+  if (is_timer_started)
+    alert("The timer is still running, are you sure you want to switch? ");
   var current = document.getElementsByClassName("active");
   current[0].className = current[0].className.replace(" active", "");
   this.className += " active";
   myFunction_set(current[0].innerHTML);
+  
   });
 }
 ///////////////////////////////////////////////////////////////////////
@@ -31,6 +35,7 @@ function myFunction_get() {
 // Create a function for setting a variable value
 function myFunction_set(str) {
   // Set the value of variable --accent .... to another value (in this case "XXXXXXX")
+stop();
 if(str=="Pomodoro")
   {
     r.style.setProperty('--primary', 'rgb(194, 68, 68)');
@@ -67,12 +72,40 @@ if(str=="Pomodoro")
 
 
 //countdown function
-function start()
+var start_btn = document.getElementById("start_btn");
+
+function start_stop()
 {
-    startTimer(time_start, disp);
-    is_timer_started = true;
+  if(start_btn.innerHTML == "Start")
+  {
+    start();    
+    
+  }
+  else if(start_btn.innerHTML == "Stop")
+  {
+    stop();
+  }
 }
 
+
+function start()
+{
+    startTimer(time_start, time_show);
+    is_timer_started = true;
+    start_btn.innerHTML = "Stop";
+}
+
+
+function stop()
+{
+  clearInterval(time_interval);
+  start_btn.innerHTML = "Start";
+  let  str = time_show.innerHTML.split(":");
+  time_start = parseInt(str[0]*60) +parseInt(str[1]);
+  console.log(time_start);
+  is_timer_started = false;
+  
+}
 
 function startTimer(duration, display) {
     var start = Date.now(),
@@ -95,6 +128,8 @@ function startTimer(duration, display) {
         }
     }
     timer();
-    setInterval(timer, 1000);
+    time_interval = setInterval(timer, 1000);
 }
+///////////////////////////// stop timer ////////////////////
+
 
