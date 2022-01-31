@@ -7,15 +7,41 @@
     <title>Pomodoro timer</title>
 
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous">
 </head>
 <body>
     <div class="wrapper">
         <div class="settings flex">
             <h2>Pomofocus</h2>
             <div class="sr_btns">
-                <button>Settings</button>
+                <button onclick="on()">Settings</button>
                 <button>Report</button>
             </div>
+                <div id="settings_box">
+                    <h3 class="flex">
+                        TIMER SETTING 
+                        <i class="fas fa-times" onclick="off()"></i> </h3>
+                    <hr>
+
+                    <h4>Time (minutes)</h4>
+                    <div class="time_inps flex">
+                        <div class="in_time_inps ">
+                            <span>Pomodoro</span> 
+                            <input type="number" value="25">
+                        </div>
+                        <div class="in_time_inps">
+                            <span>Short Break</span> 
+                            <input type="number" value="5">
+                        </div>
+                        <div class="in_time_inps">
+                            <span>Long Break</span> 
+                            <input type="number" value="10">
+                        </div>
+                    </div>
+
+                   <button>OK</button> 
+                </div>
 
         </div>
 
@@ -46,5 +72,6 @@
     <small>Source: <a href="https://pomofocus.io/">Pomofocus</a> </small>
     
     <script src="script.js"></script>
+    <script src="settings.js"></script>
 </body>
 </html>
