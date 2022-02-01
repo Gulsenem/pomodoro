@@ -1,6 +1,11 @@
-var time_start= 25*60;
+let p = document.getElementById("pom_set_btn");
+let sh = document.getElementById("short_set_btn");
+let l = document.getElementById("long_set_btn");
+
+var time_start= p.value *60;
 let time_interval;
 var disp = document.getElementById("time_show");
+    disp.innerHTML = time_start/60 + ":00";
 var is_timer_started = false;
 
 
@@ -41,9 +46,11 @@ if(str=="Pomodoro")
     r.style.setProperty('--primary', 'rgb(194, 68, 68)');
     r.style.setProperty('--secondary', 'rgb(206, 111, 111)');
     r.style.setProperty('--accent', 'rgb(180, 53, 53');    
-    time_start = 60*25;  
+    time_start = 60*p.value;  
     is_timer_started = false;
-    disp.innerHTML = "25:00";
+       let ts =  time_start/60 
+   ts = ts < 10 ? "0" + ts : ts;
+    disp.innerHTML = ts + ":00";   
   }
   else  if(str=="Short Break")
   {
@@ -51,8 +58,12 @@ if(str=="Pomodoro")
     r.style.setProperty('--secondary', 'rgb(119, 172, 175)');
     r.style.setProperty('--accent', 'rgb(52, 111, 116)');
     is_timer_started = false;
-    time_start = 60*5;        
-    disp.innerHTML = "05:00";
+    time_start = 60*sh.value;
+   let ts =  time_start/60 
+   ts = ts < 10 ? "0" + ts : ts;
+    disp.innerHTML = ts + ":00";   
+
+    //disp.innerHTML = sh.value + ":00";
   }
   else if(str=="Long Break")
   {
@@ -60,8 +71,10 @@ if(str=="Pomodoro")
     r.style.setProperty('--secondary', 'rgb(128, 175, 209)');
     r.style.setProperty('--accent', 'rgb(57, 103, 136)');  
     is_timer_started = false;
-    time_start = 60*10;  
-    disp.innerHTML = "10:00";    
+    time_start = 60*l.value;  
+    let ts =  time_start/60 
+    ts = ts < 10 ? "0" + ts : ts;
+     disp.innerHTML = ts + ":00";    
   }
   
 }

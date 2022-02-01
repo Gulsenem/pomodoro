@@ -28,15 +28,15 @@
                     <div class="time_inps flex">
                         <div class="in_time_inps ">
                             <span>Pomodoro</span> 
-                            <input type="number" value="25">
+                            <input type="number" value="25" id="pom_set_btn">
                         </div>
                         <div class="in_time_inps">
                             <span>Short Break</span> 
-                            <input type="number" value="5">
+                            <input type="number" value="5" id="short_set_btn">
                         </div>
                         <div class="in_time_inps">
                             <span>Long Break</span> 
-                            <input type="number" value="10">
+                            <input type="number" value="15" id="long_set_btn">
                         </div>
                     </div>
 
@@ -54,7 +54,7 @@
                     <button class='time_btn'>Long Break</button>
                 </div>
                 <div id="time_show">
-                        25:00
+                        
                 </div>
                 <button id="start_btn" onclick="start_stop()">Start</button>
             </div>
