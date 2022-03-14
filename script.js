@@ -45,7 +45,8 @@ if(str=="Pomodoro")
   {
     r.style.setProperty('--primary', 'rgb(194, 68, 68)');
     r.style.setProperty('--secondary', 'rgb(206, 111, 111)');
-    r.style.setProperty('--accent', 'rgb(180, 53, 53');    
+    r.style.setProperty('--accent', 'rgb(180, 53, 53');  
+    r.style.setProperty('--hover', 'rgb(180, 48, 48)');    
     time_start = 60*p.value;  
     is_timer_started = false;
        let ts =  time_start/60 
@@ -57,6 +58,7 @@ if(str=="Pomodoro")
     r.style.setProperty('--primary', 'rgb(76, 145, 149)');
     r.style.setProperty('--secondary', 'rgb(119, 172, 175)');
     r.style.setProperty('--accent', 'rgb(52, 111, 116)');
+    r.style.setProperty('--hover', 'rgb(49, 104, 109)');
     is_timer_started = false;
     time_start = 60*sh.value;
    let ts =  time_start/60 
@@ -69,7 +71,8 @@ if(str=="Pomodoro")
   {
     r.style.setProperty('--primary', 'rgb(69, 124, 163)');
     r.style.setProperty('--secondary', 'rgb(128, 175, 209)');
-    r.style.setProperty('--accent', 'rgb(57, 103, 136)');  
+    r.style.setProperty('--accent', 'rgb(57, 103, 136)'); 
+    r.style.setProperty('--hover', 'rgb(54, 96, 126)'); 
     is_timer_started = false;
     time_start = 60*l.value;  
     let ts =  time_start/60 

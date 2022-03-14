@@ -40,7 +40,7 @@
                         </div>
                     </div>
 
-                   <button>OK</button> 
+                   <button onclick="set_box_ok()">OK</button> 
                 </div>
 
         </div>
@@ -60,18 +60,37 @@
             </div>
 
             <div class="add_task">
-                <button>Add Task </button> 
+                <button onclick="add_task()"> <i class="far fa-plus-circle"></i> Add Task </button> 
+                <div id="add_task_box">
+                    <div class="inside_upAddTaskBox">
+                        <textarea placeholder="What are you working?" cols="30" rows="2"></textarea>         
+                        <p>Est Pomodoros</p> 
+                        <div id="add_task_box_inp_num">
+                            <input type="number" value="0"> 
+                            <button id="up"> <i class="fas fa-caret-up"></i> </button>
+                            <button id="down"> <i class="fas fa-caret-down"></i></button>
+                        </div>                        
+                    </div>
+
+
+                    <div class="save_cancel">
+                        <button>Cancel</button>
+                        <button>Save</button>
+                    </div>
+                </div>
+            </div>
                 <div class="task_liste">
                     php
                     
                 </div>
-            </div> 
-        </div>
+        </div> 
+        
 
     </div>
     <small>Source: <a href="https://pomofocus.io/">Pomofocus</a> </small>
     
     <script src="script.js"></script>
     <script src="settings.js"></script>
+    <script src="add_task.js"></script>
 </body>
 </html>

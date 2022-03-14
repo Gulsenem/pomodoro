@@ -10,6 +10,7 @@
     --accent: rgb(180, 53, 53);
     --primary: rgb(194, 68, 68);
     --secondary: rgb(206, 111, 111);
+    --hover: rgb(180, 48, 48);
 }
 body
 {
@@ -115,7 +116,76 @@ button
 }
 .add_task button:hover
 {
-    background-color: rgb(180, 48, 48);
+    background-color: var(--hover);
+}
+#add_task_box
+{
+    background-color: white;
+    border-radius: var(--radius);
+    color:rgb(37, 37, 37);
+
+    display: none;
+}
+#add_task_box textarea
+{
+    font-size: 1.2em;
+    border: none;
+    outline:none;
+    width:100%;
+}
+.inside_upAddTaskBox
+{
+    padding:14px;
+}
+#add_task_box_inp_num>*
+{
+    font-size: 1.1em;
+    padding: 10px 12px;
+    width:min-content;
+    margin-right: 5px;
+}
+#add_task_box_inp_num>input
+{
+    background-color:rgb(226, 224, 224);
+    
+}
+
+#up, #down
+{
+    background-color: white;
+    color:black;
+
+    border:none;
+    -webkit-box-shadow: -2px 1px 4px 2px rgb(0 0 0 / 20%);
+    box-shadow: -2px 1px 4px 2px rgb(0 0 0 / 20%);
+
+}
+.save_cancel 
+{
+    background-color: rgb(226, 224, 224);
+    padding: 14px;
+    text-align: end;
+    border-radius: var(--radius);
+}
+.save_cancel button
+{
+    width:min-content;
+    background-color: inherit;
+    color:rgb(72, 71, 71);
+    border:none;
+    padding: 5px 12px;
+
+
+}
+.save_cancel button:last-child
+{
+    background-color: rgb(160, 160, 160);
+    color:white;
+}
+.save_cancel button:hover, .save_cancel button:last-child :hover
+{
+    background-color: inherit;
+    color:black;
 }
 
 .task_liste
