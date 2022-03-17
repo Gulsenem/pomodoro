@@ -63,7 +63,7 @@
                 <button onclick="add_task()"> <i class="far fa-plus-circle"></i> Add Task </button> 
                 <div id="add_task_box">
                     <div class="inside_upAddTaskBox">
-                        <textarea placeholder="What are you working?" cols="30" rows="2"></textarea>         
+                        <textarea placeholder="What are you working?" cols="30" rows="2" id="addTask_txarea"></textarea>         
                         <p>Est Pomodoros</p> 
                         <div id="add_task_box_inp_num">
                             <input type="number" value="0"> 
@@ -74,15 +74,15 @@
 
 
                     <div class="save_cancel">
-                        <button>Cancel</button>
-                        <button>Save</button>
+                        <button onclick="cancel_task()">Cancel</button>
+                        <button onclick="save_task()">Save</button>
                     </div>
                 </div>
             </div>
-                <div class="task_liste">
-                    php
-                    
-                </div>
+            <div id="task_container">
+              
+            </div>
+
         </div> 
         
 
