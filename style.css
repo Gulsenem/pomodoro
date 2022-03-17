@@ -10,6 +10,7 @@
     --accent: rgb(180, 53, 53);
     --primary: rgb(194, 68, 68);
     --secondary: rgb(206, 111, 111);
+    --gray: rgb(226, 224, 224);
     --hover: rgb(180, 48, 48);
 }
 body
@@ -193,13 +194,21 @@ button
     margin-top: 20px;
     background-color:white;
     color:black;
-    padding: 10px;
+    padding: 16px;
     border-radius:var(--radius);
+    border-left: 8px solid white; 
+    
     
 }
 .task_liste:hover
 {
   border-left: 8px solid black; 
+}
+.task_liste i, b
+{
+    color: var(--gray);
+    font-size: 1.1em;
+    margin: 0 6px;
 }
 small
 {
