@@ -1,0 +1,37 @@
+
+    @media  (max-width: 480px)
+    {
+        body{
+            padding:20px;
+        }
+        .wrapper
+        {
+            max-width: 420px;
+            
+        }
+
+        .container
+        {
+            max-width: 400px;
+            margin: 40px auto;
+        }
+        #time_btns
+        {
+            max-width: 100%;
+        }
+        #time_btns> button
+        {
+            font-size: 0.9em;
+	        padding:6px 10px;
+            margin: 0;
+        }
+        #time_show
+        {
+            font-size: 5em;
+            padding: 20px 0;
+        }
+        #add_task_box_inp_num input
+        {
+            width: 70px;
+        }
+    }
