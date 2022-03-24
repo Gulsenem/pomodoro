@@ -34,4 +34,23 @@
         {
             width: 70px;
         }
+        #settings_box
+        {
+            width: 250px;
+
+            position: absolute;
+            top: 70px;
+            left: 100px;
+        }
+        #settings_box i
+        {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+        #settings_box .flex
+        {
+            flex-direction: column;
+        }
+
     }

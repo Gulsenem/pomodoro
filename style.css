@@ -223,7 +223,6 @@ small a
 
 #settings_box
 {
-    height: 600px;
     width: 400px;
     background-color: rgb(245, 244, 244);
     border-radius: var(--radius);
